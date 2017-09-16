@@ -14,7 +14,7 @@ Word found in total no of 0 files
 2017-09-15 23:57:47.028350
 The directory is :/Users/saurabdulal/PycharmProjects
 Word to replace :hello
-Replace with :sello
+Replace with :hello
 This file/Users/saurabdulal/PycharmProjects/chatRoom/main.py contains hello
 User input: y
 This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains hello
@@ -23,11 +23,47 @@ Couldn't replace world: 'list' object is not callable
 *******************Bigning of this session of interpretation******************:
 2017-09-15 23:59:23.273633
 The directory is :/Users/saurabdulal/PycharmProjects
-Word to replace :sello
+Word to replace :hello
 Replace with :hello
 *******************Bigning of this session of interpretation******************:
 2017-09-15 23:59:46.241290
 The directory is :sadfasdf
-Word to replace :sello
+Word to replace :hello
 Replace with :hello
 Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-16 00:04:19.552652
+The directory is :sadf
+Word to replace :asdfdsf
+Replace with :asdf
+Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-16 00:04:33.780637
+The directory is :/Users/saurabdulal/PycharmProjects
+Word to replace :hello
+Replace with :hello
+This file/Users/saurabdulal/PycharmProjects/chatRoom/main.py contains hello
+User input: ry
+This file/Users/saurabdulal/PycharmProjects/PythonTest/log contains hello
+This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains hello
+Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-09-16 00:05:42.346937
+The directory is :/Users/saurabdulal/PycharmProjects
+Word to replace :hello
+Replace with :hello
+This file/Users/saurabdulal/PycharmProjects/chatRoom/main.py contains hello
+User input: ry
+This file/Users/saurabdulal/PycharmProjects/PythonTest/log contains hello
+This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains hello
+Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-09-16 00:07:43.723317
+The directory is :/Users/saurabdulal/PycharmProjects
+Word to replace :sello
+Replace with :hello
+This file/Users/saurabdulal/PycharmProjects/chatRoom/main.py contains sello
+User input: ry
+This file/Users/saurabdulal/PycharmProjects/PythonTest/log contains sello
+This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains sello
+Couldn't replace world: 'list' object is not callable

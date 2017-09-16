@@ -23,9 +23,8 @@ def replace_write_to_file(f_pointer,content): #this function will replace entire
     try:
         f_pointer.write(content)
     except Exception as e:
-        config.log_bucket.append("Couldn't write to file 'from_replace'" + e)
-        print("Couldn't write to file " + e)
-
+        config.log_bucket.append("Couldn't write to file 'from_replace'" + str(e))
+        return e
     f_pointer.truncate() #truncate the file size, default assure current file position is not changed
 
     return
@@ -62,23 +61,20 @@ def read_dir_replace_content(path, word_to_replace, replace_with):
                             try:
                                 replace_write_to_file(f,f_content)
                             except Exception as e:
-                                config.log_bucket.append("Cannot write to file :" +e)
-                                print("Cannot write to file 'y':" +e)
+                                config.log_bucket.append("Cannot write to file :" +str(e))
                         elif user_input=='ry':
                             f_content = re.sub(word_to_replace,replace_with,f_content)
                             try:
                                 replace_write_to_file(f,f_content)
                             except Exception as e:
-                                config.log_bucket.append("Cannot write to file 'ry':" + e)
-                                print("Cannot write to file :" +e)
+                                config.log_bucket.append("Cannot write to file 'ry':" + str(e))
                             recursive_replace_flag = True
                     else:
                         f_content = re.sub(word_to_replace, replace_with, f_content)
                         try:
                             replace_write_to_file(f, f_content)
                         except Exception as e:
-                            config.log_bucket.append("Cannot write to file 'ry+':" + e)
-                            print("Cannot write to file :" + e)
+                            config.log_bucket.append("Cannot write to file 'ry+':" + str(e))
 
     config.log_bucket.append("Word found in total no of " +str(word_found_counter)+ " files")
 
