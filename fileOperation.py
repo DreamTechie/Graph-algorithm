@@ -12,8 +12,13 @@ def replace_content(text_to_replace, replace_with, file_path):
 def write_to_file(f_pointer,content): #this function will replace entire content with the new content
 
     f_pointer.seek(0)
-    f_pointer.write(content)
+    try:
+        f_pointer.write(content)
+    except Exception as e:
+        print("Couldn't write to file " + e)
+
     f_pointer.truncate() #truncate the file size, default assure current file position is not changed
+
     return
 
 def read_dir_replace_content(path, word_to_replace, replace_with):
@@ -24,6 +29,7 @@ def read_dir_replace_content(path, word_to_replace, replace_with):
 
         # so we got every root, subdir and files from that folder, this function will only work for text files for now, others
         # are left for future enhancement
+        #there is different between input and raw_input
 
         for filenames in files:
 
@@ -40,12 +46,21 @@ def read_dir_replace_content(path, word_to_replace, replace_with):
                         user_input = raw_input()
                         if user_input=='y':
                             f_content = re.sub(word_to_replace,replace_with, f_content)
-                            write_to_file(f,f_content)
+                            try:
+                                write_to_file(f,f_content)
+                            except Exception as e:
+                                print("Cannot write to file :" +e)
                         elif user_input=='ry':
                             f_content = re.sub(word_to_replace,replace_with,f_content)
-                            write_to_file(f,f_content)
+                            try:
+                                write_to_file(f,f_content)
+                            except Exception as e:
+                                print("Cannot write to file :" +e)
                             recursive_replace_flag = True
                     else:
                         f_content = re.sub(word_to_replace, replace_with, f_content)
-                        write_to_file(f,f_content)
+                        try:
+                            write_to_file(f, f_content)
+                        except Exception as e:
+                            print("Cannot write to file :" + e)
     return
