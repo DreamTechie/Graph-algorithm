@@ -18,30 +18,35 @@ def count_match_in_string(str1, str2):
 def word_replace():
     print("Please enter a directory to replace word from all the files from that directory\n")
     path = raw_input()
+    config.log_bucket.append("The directory is :"+path)
     print("What do you want to replace?\n")
     word_to_replace = raw_input()
+    config.log_bucket.append("Word to replace :" + word_to_replace)
     print("Replace with?\n")
     replace_with = raw_input()
+    config.log_bucket.append("Replace with :" + replace_with)
     try:
         fileOperation.read_dir_replace_content(path, word_to_replace, replace_with)
     except Exception as e:
-        print("Couldn't read dir and replace content :"+ e)
+        config.log_bucket("Couldn't read dir and replace content :"+ str(e))
+        print("Couldn't read dir and replace content :"+ str(e))
+
+    #dump to log file
+    fileOperation.write_to_file(config.log_bucket,config.log_file)
+    config.log_bucket = []
+
+
 def main():
     # skyline.skyline_config()
-
-    print(datetime.datetime.now())
-    f_log_name = config.log_file
-    log_object= lh.log_handler()
-    log_pointer = log_object.give_me_a_log_pointer()
-
-    print >> log_pointer, "*******************Bigning of this session of interpretation******************:"
-    print >> log_pointer, datetime.datetime.now()  # or f.write('...\n')
-    return
+    config.log_bucket.append("*******************Bigning of this session of interpretation******************:")
+    config.log_bucket.append(str(datetime.datetime.now()))
 
     try:
         word_replace()
     except Exception as e:
-        print("Couldn't replace world: " +e)
+        config.log_bucket.append("Couldn't replace world: " +str(e))
+        fileOperation.write_to_file(config.log_bucket,config.log_file)
+        print("Couldn't replace world: " +str(e))
 
 if __name__ == '__main__':
     main()

@@ -1,10 +1,33 @@
 *******************Bigning of this session of interpretation******************:
-2017-09-15 21:15:00.008337 log
+2017-09-15 23:55:15.260975
+The directory is :sadf
+Word to replace :asdf
+Replace with :sdf
+Word found in total no of 0 files
 *******************Bigning of this session of interpretation******************:
-2017-09-15 21:15:16.525870
+2017-09-15 23:56:38.195914
+The directory is :asdf
+Word to replace :asdf
+Replace with :sadf
+Word found in total no of 0 files
 *******************Bigning of this session of interpretation******************:
-2017-09-15 21:28:45.093984
+2017-09-15 23:57:47.028350
+The directory is :/Users/saurabdulal/PycharmProjects
+Word to replace :hello
+Replace with :sello
+This file/Users/saurabdulal/PycharmProjects/chatRoom/main.py contains hello
+User input: y
+This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains hello
+User input: y
+Couldn't replace world: 'list' object is not callable
 *******************Bigning of this session of interpretation******************:
-2017-09-15 21:28:50.405575
+2017-09-15 23:59:23.273633
+The directory is :/Users/saurabdulal/PycharmProjects
+Word to replace :sello
+Replace with :hello
 *******************Bigning of this session of interpretation******************:
-2017-09-15 21:28:52.381135
+2017-09-15 23:59:46.241290
+The directory is :sadfasdf
+Word to replace :sello
+Replace with :hello
+Word found in total no of 0 files
