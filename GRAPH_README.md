@@ -91,27 +91,27 @@ Test Cases
     
  Functions used in the program
  -----------------------------
- graph_input(node_list=None):
-    -> Function to handle user input from file or from console
+        graph_input(node_list=None):
+           - Function to handle user input from file or from console
     
- def graph_construction(node_list=None)
-    -> Construct graph from the node_list i.e. adjanceny list
+        def graph_construction(node_list=None)
+           - Construct graph from the node_list i.e. adjanceny list
     
- graph_traversal(graph, vertex=None, trv_path=[])
-    -> Graph traversal to find if DAG or not, it uses a modified DFS 
+        graph_traversal(graph, vertex=None, trv_path=[])
+           - Graph traversal to find if DAG or not, it uses a modified DFS 
     
- def dfs_find_all_path_from_node(graph, vertex, paths=[])
-    -> Find all the possible path from a node, only works for DAG. 
-    -> Future enhancement, this function can be merged with graph_traversal 
+        def dfs_find_all_path_from_node(graph, vertex, paths=[])
+           - Find all the possible path from a node, only works for DAG. 
+           - Future enhancement, this function can be merged with graph_traversal 
  
- def longest_path_from_a_node(list, node):
-    -> Finds a longest path from a node, it takes list of list of all paths as a argument 
+        def longest_path_from_a_node(list, node):
+           - Finds a longest path from a node, it takes list of list of all paths as a argument 
  
- def longest_path(list):
-    -> Finds longest path in a give DAG 
+        def longest_path(list):
+           - Finds longest path in a give DAG 
     
- def all_paths(graph_dic)
-    -> Initilizer function to calculate all paths and longest path 
+        def all_paths(graph_dic)
+           - Initilizer function to calculate all paths and longest path 
  
  
  
