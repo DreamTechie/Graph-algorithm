@@ -14,8 +14,10 @@ Algorithm Explanation
     -  Take input from file or from the console 
     -  Construct adjacency listing from the given input of format {1: [2], 2: [4], 3: [4, 1]}
     -  Create a graph class with all the required parameters, such as node pointer, visited flag, parent node, child node etc 
-    -  Create graph objects equals no of available nodes and initialize all the node as per the requirement
-    -  Create all the necessary functions such as DFS, longest path finder and so on 
+        - I have created some unnecessary fields in this program, it's just for some future works, if future exist == Ture
+    -  Create graph objects mapped to equals no of available nodes, and initialize all the node as per the requirement
+    -  Create all the necessary functions such as DFS, longest path finder and so on
+        - Some created function may be useless for this problem 
     -  Call DFS function for the graph traversal and find if the graph is DAG or not
     -  If graph is DAG, find all the possible paths and linear ordering of the given directed graph
     -  Print the necessities and exit
@@ -28,13 +30,13 @@ Limitations
             1,3
             2,3
             4,1 - no line break after this line, i.e. this should be the last line of the file
-        - While reading file, it will create a dictionary graph of size 1-no of nodes 
+        - While reading from file, it will create a dictionary of adjacency matrix(graph) of size equal to no of nodes 
         - While reading from file, file name should be supplied in following way
-            "python graph.py file_name"
-            If file name not submitted while running the program a
-            and if option 1(i.e. 1 - input from file) selected then program will exit with following message. 
+            "python graph.py file_name" #important 
+            - If file name not submitted while running the program 
+            and if option 1 (i.e. 1 - input from file) selected, then program will exit with following message. 
             "File name not submitted"
-        - Program is tested for limited no of test cases and may contain some bugs and logical syntax error
+        - Program is tested for limited no of test cases and may contain some bugs and logical syntax error, forgive me !!!
         
         
 
@@ -86,3 +88,8 @@ Test Cases
     Please 1 to input from file or press 2 to input from console
     input -> 1
     Output -> File name not submitted
+    
+ Functions used in the program
+ -----------------------------
+    
+    
