@@ -6,7 +6,8 @@ import fileOperation
 import config
 import datetime
 import logHandler as lh
-
+import itertools
+import graph
 
 def count_match_in_string(str1, str2):
     count = 0
@@ -37,16 +38,23 @@ def word_replace():
 
 
 def main():
-    # skyline.skyline_config()
+    #skyline.skyline_config()
+    #LOG WRITING
     config.log_bucket.append("*******************Bigning of this session of interpretation******************:")
     config.log_bucket.append(str(datetime.datetime.now()))
 
-    try:
-        word_replace()
-    except Exception as e:
-        config.log_bucket.append("Couldn't replace world: " +str(e))
-        fileOperation.write_to_file(config.log_bucket,config.log_file)
-        print("Couldn't replace world: " +str(e))
+
+    #find if a graph is DAG, if DAG print its longest path from a node or as a whole
+    graph.graph_input()
+
+
+    #WORD REPLACE
+    # try:
+    #     word_replace()    #use the function you want here
+    # except Exception as e:
+    #     config.log_bucket.append("Couldn't replace world: " +str(e))
+    #     fileOperation.write_to_file(config.log_bucket,config.log_file)
+    #     print("Couldn't replace world: " +str(e))
 
 if __name__ == '__main__':
     main()

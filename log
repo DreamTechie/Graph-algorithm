@@ -67,3 +67,115 @@ User input: ry
 This file/Users/saurabdulal/PycharmProjects/PythonTest/log contains sello
 This file/Users/saurabdulal/PycharmProjects/PythonTest/sometext contains sello
 Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:04:50.741515
+The directory is :
+Word to replace :
+Replace with :
+Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:15:24.970982
+The directory is :SyntaxWarning: name 'log_bucket' is assigned to before global declaration
+Word to replace :  global log_bucket
+Replace with :
+Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:15:48.059244
+The directory is :/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website
+Word to replace :<li>
+Replace with :                        <a href="mini_ndn_edit.html">GUI</a>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/404.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/index.html contains <li>
+User input:                     </li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_adv_cluster.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_adv_config.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_connect_to_outside.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_contributors.html contains <li>
+User input:                     <li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_edit.html contains <li>
+User input:                         <a href="mini_ndn_experiments.html">Experiments</a>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_experiments.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_getting_started.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_installation.html contains <li>
+User input:                     </li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_license.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_release_notes_010.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_release_notes_011.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_release_notes_020.html contains <li>
+User input:                     <li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/mini_ndn_release_notes_030.html contains <li>
+User input:                         <a href="#">Advance Topics</a>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/myupdate.html contains <li>
+User input:                         <ul>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/news.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/news_archive.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/samplepost.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_adv_cluster.html contains <li>
+User input:                             <li><a href="mini_ndn_adv_config.html">Config</a></li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_adv_config.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_connect_to_outside.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_contributors.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_edit.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_experiments.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_getting_started.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_installation.html contains <li>
+User input:                             <li><a href="mini_ndn_adv_cluster.html">Cluster</a></li>
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_release_notes_010.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_release_notes_011.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_release_notes_020.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/tag_mini_ndn_release_notes_030.html contains <li>
+User input: 
+This file/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website/test-post-from-last-year.html contains <li>
+User input: 
+Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:20:06.447719
+The directory is :/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website
+Word to replace :jsdfkhsadkxklajxmiaewrjox;l,sdlfk asjkdfn alsdkfjlk <> jkajsdoijiclmljdslf fkjajsdkf ka,asdfj onkanskuhe nk jna sdf
+Replace with :asd,fnenzIMDLSF
+Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:21:32.449144
+The directory is :M,DFS
+Word to replace :JFKNCCLALMM  KSDNL SLADKLML KLKASMD;MVL;M 
+Replace with :KLSDLAS;'M ;AOMVA;SDLM; 
+Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:21:56.180592
+The directory is :JSDKFKANKASD
+Word to replace :LDKFM ,.AS<>S SLDKKL <>
+Replace with :DSF ><<><> SDVA A
+Word found in total no of 0 files
+*******************Bigning of this session of interpretation******************:
+2017-09-22 14:23:08.524538
+The directory is :/Users/saurabdulal/Library/Mobile Documents/com~apple~CloudDocs/PROJECT/mini-ndn-website
+Word to replace :"/">SDF ASDF AS<>ADF DFSDF <>DAF ASDFASDF 
+Replace with :SDFAS<>DSAFASD <<<< AS.DFA SDF < ASDFSDF DSF SDF LSDL  >ADFASDF SDAF
+Couldn't replace world: 'list' object is not callable
+*******************Bigning of this session of interpretation******************:
+2017-10-07 15:32:42.515326
+The directory is :ssdfas
+Word to replace :f
+Replace with :asdf
+Word found in total no of 0 files
