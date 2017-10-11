@@ -12,11 +12,11 @@ If DAG, it finds linear sorting and also the logest path from a node or in total
 import sys
 
 # check if file is supplied while running the program and set the file_flag accordingly
-try:
-    file_flag = True
-    fromFile = sys.argv[1]
-except Exception as e:
-    file_flag = False
+# try:
+#     file_flag = True
+#     fromFile = sys.argv[1]
+# except Exception as e:
+#     file_flag = False
 
 DAG_flag = True
 
@@ -71,7 +71,10 @@ def graph_input(node_list=None):
     a = raw_input()
 
     if a == '1':
-        if not file_flag:
+        print("Enter the file name")
+        fromFile = raw_input()
+
+        if not fromFile:
             print("File name not submitted")  # file not found error
             return
         else:
