@@ -84,7 +84,7 @@ Test Cases
     Longest path for the given node 3 is [3, 1, 2]
     And the length of the longest path from node 3 is 2
     
-    ---------------------- While reading file but no file name supplied ------------------------
+    ---------------------- While reading file but no file name supplied ---------
     Please 1 to input from file or press 2 to input from console
     input -> 1
     Output -> File name not submitted

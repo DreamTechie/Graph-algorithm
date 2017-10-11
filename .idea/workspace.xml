@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82e4d505-aa96-43a6-85ad-fd7e61123aa4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GRAPH_README.md" afterPath="$PROJECT_DIR$/GRAPH_README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -86,8 +85,8 @@
         <entry file="file://$PROJECT_DIR$/GRAPH_README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="232">
-                <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+              <first_editor relative-caret-position="370">
+                <caret line="86" column="81" lean-forward="false" selection-start-line="86" selection-start-column="81" selection-end-line="86" selection-end-column="81" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -758,8 +757,8 @@
     <entry file="file://$PROJECT_DIR$/GRAPH_README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="232">
-            <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+          <first_editor relative-caret-position="370">
+            <caret line="86" column="81" lean-forward="false" selection-start-line="86" selection-start-column="81" selection-end-line="86" selection-end-column="81" />
             <folding />
           </first_editor>
           <second_editor />
