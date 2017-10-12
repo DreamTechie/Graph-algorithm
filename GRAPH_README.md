@@ -25,18 +25,19 @@ Algorithm Explanation
 Limitations
 -----------
 
-        - Graph should be in the following formats in the file 
+        - Graph input should be in the following formats in the test text file 
         - 5 - no of nodes 
             1,3
             2,3
-            4,1 - no line break after this line, i.e. this should be the last line of the file
-        - While reading from file, it will create a dictionary of adjacency matrix(graph) of size equal to no of nodes 
-        - While reading from file, file name should be supplied in following way
-            "python graph.py file_name" #important 
-            - If file name not submitted while running the program 
-            and if option 1 (i.e. 1 - input from file) selected, then program will exit with following message. 
-            "File name not submitted"
-        - Program is tested for limited no of test cases and may contain some bugs and logical syntax error, forgive me !!!
+            4,1 - no line break after is permitted, i.e. this should be the last line of the file
+            Individual nodes are not allowed in the file such as 
+            3
+            4
+            etc 
+        - While reading from file, a dictionary of adjacency matrix(graph) of size equal to no of nodes is created. It is               bound to the problem statement
+        - Program is tested for limited no of test cases and may contain some bugs as well as some logical syntax error.
+        - Merging and code refactoring will be done at some time in future 
+        - Proper error handling is not carried out
         
         
 
@@ -92,23 +93,23 @@ Test Cases
  Functions used in the program
  -----------------------------
         graph_input(node_list=None):
-           - Function to handle user input from file or from console
+           - Function to handle user input from file or from the console
     
         def graph_construction(node_list=None)
-           - Construct graph from the node_list i.e. adjanceny list
+           - Construct a graph from the given node_list i.e. adjanceny list
     
         graph_traversal(graph, vertex=None, trv_path=[])
-           - Graph traversal to find if DAG or not, it uses a modified DFS 
+           - Graph traversal to find if the graph is DAG or not, this function is a modified DFS
     
         def dfs_find_all_path_from_node(graph, vertex, paths=[])
-           - Find all the possible path from a node, only works for DAG. 
+           - Find all possible path from a node, only works if the graph is a DAG. 
            - Future enhancement, this function can be merged with graph_traversal 
  
         def longest_path_from_a_node(list, node):
-           - Finds a longest path from a node, it takes list of list of all paths as a argument 
+           - Finds the longest path from a node, it takes list of list of all the paths as a argument 
  
         def longest_path(list):
-           - Finds longest path in a give DAG 
+           - Finds longest path in a given DAG 
     
         def all_paths(graph_dic)
            - Initilizer function to calculate all paths and longest path 
