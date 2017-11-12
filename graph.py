@@ -11,12 +11,6 @@ If DAG, it finds linear sorting and also the logest path from a node or in total
 
 import sys
 
-# check if file is supplied while running the program and set the file_flag accordingly
-# try:
-#     file_flag = True
-#     fromFile = sys.argv[1]
-# except Exception as e:
-#     file_flag = False
 
 DAG_flag = True
 
@@ -184,7 +178,6 @@ def graph_traversal(graph, vertex=None, trv_path=[]):
             trv_path = graph_traversal(graph, None, trv_path)
 
     else:
-        print("reached here")
         global DAG_flag
         DAG_flag = False
         print(DAG_flag)
@@ -206,6 +199,7 @@ def dfs_find_all_path_from_node(graph, vertex, paths=[]):
     else:
         paths += [vertex]
     return paths
+
 
 
 # find the longest path from a give node, only works for DAG
