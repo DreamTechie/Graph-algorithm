@@ -9,11 +9,11 @@ integers X, Y , separated by whitespaces. The next line will be n. The next n li
 , ci
 in that order separated
 by whitespaces. For example, one input is:
-20 30
-4
-3 4 10
-4 5 9
-12 23 100
-3 3 2
+- 20 30
+- 4
+- 3 4 10
+- 4 5 9
+- 12 23 100
+- 3 3 2
 ### Output 
 Your output should be the best return that you can get. You do not need to print the strategy.
