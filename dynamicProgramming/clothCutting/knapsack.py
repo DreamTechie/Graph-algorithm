@@ -16,10 +16,6 @@ def knapSack(W, wt, val, n):
                    knapSack(W, wt, val, n - 1))
 
 
-def CC(lenX, lenY, input,weight=0,n):
-
-    if lenX or lenY[]
-
 
 # end of function knapSack
 
@@ -31,5 +27,7 @@ n = len(val)
 
 input = [{'x':3,'y':4,'w':10},{'x':4,'y':5,'w':9},{'x':12,'y':23,'w':100},{'x':3,'y':3,'w':2}]
 
-CC(20,30,input,len(input))
+
+
+#CC(20,30,input,len(input))
 #print (knapSack(W, wt, val, n))

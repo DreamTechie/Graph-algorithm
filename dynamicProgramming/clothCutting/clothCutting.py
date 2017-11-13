@@ -1,58 +1,52 @@
+'''
+
+@author: Saurab Dulal
+Date: Nov 13, 2017
+
+Problem Description: This is a recursive solution to the cloth cutting problem - please see the problem
+description in README.md file
+
+'''
 from copy import deepcopy
 
-sum = 20
-def construct_tree(given_node={1:2,2:4,3:7,4:0,5:10}, max_sum=0):
+def clothCutting(lenX, lenY, input, n, weight=0):
 
+    if n<0:
+        return weight
+    if(input[n]['x'] > lenX) or (input[n]['y'] > lenY):
+        return clothCutting(lenX,lenY, input, n-1, weight)
 
-    for node in given_node:
-        print(node)
-        if max_sum == 20:
-            return max_sum
-        max_sum = max_sum+node
-        max_sum = construct_tree(given_node, max_sum)
+    if (lenX - input[n]['x'] >= 0) and (lenY - input[n]['y'] >= 0):
 
-    return max_sum
+        buff_weight = input[n]['w']
+        return max(clothCutting(lenX - input[n]['x'],lenY - input[n]['y'], input, n, weight+buff_weight),
+                    clothCutting(lenX - input[n]['x'], lenY, input, n, weight + buff_weight),
+                    clothCutting(lenX, lenY - input[n]['y'], input, n, weight + buff_weight),
+                    clothCutting(lenX, lenY, input, n-1, weight))
 
-
-
-def bestCutting(length, breadth, number, cuttingSize):
-
-
-    cuttingSizeList = cuttingSize #Deep copy is used to pass by value in python,
-
-    for i in range(1, number):
-
-        buffer = deepcopy(cuttingSizeList[i])
-
-        for j in range(0,i):
-
-            #need to check length and breadth
-            xCutting = cuttingSizeList[j]['x']+cuttingSizeList[i]['x']
-            yCutting = cuttingSizeList[j]['y']+cuttingSizeList[i]['y']
-            wCutting = cuttingSizeList[j]['w']+cuttingSizeList[i]['w']
-
-            if (xCutting <= length and yCutting <= breadth):
-
-                if wCutting > buffer['w']:
-                    buffer['x'] = xCutting
-                    buffer['y'] = yCutting
-                    buffer['w'] = wCutting
-
-        cuttingSizeList[i]['x'] = buffer['x']
-        cuttingSizeList[i]['y'] = buffer['y']
-        cuttingSizeList[i]['w'] = buffer['w']
-
-    return cuttingSizeList
-
-
-
+def make_data_set(input): # [(),()]
+    sample_data = []
+    for i in input:
+        sample_data.append({'x':i[0],'y':i[1],'w':i[2]})
+    return sample_data,len(sample_data)
 
 
 if __name__ == '__main__':
 
     input = [{'x':3,'y':4,'w':10},{'x':4,'y':5,'w':9},{'x':12,'y':23,'w':100},{'x':3,'y':3,'w':2}]
 
-    construct_tree()
-    #cuttingSizeList = bestCutting(20,30,4,input)
-    #print(cuttingSizeList)
+    input1 = [{'x': 1, 'y': 1, 'w': 10}, {'x': 20, 'y': 20, 'w': 100}]
+
+    #40,70
+    sample_data = [(21, 22, 582), (31, 13, 403), (9, 35, 315), (9, 24, 216), (30, 7, 210), (11, 13, 143),
+              (10, 14, 140), (14, 8, 110), (12, 8, 94), (13, 7, 90)]
+
+    sample_data1 = [(8, 4, 66), (3, 7, 35), (8, 2, 24), (3, 4, 17), (3, 3, 11), (3, 2, 8), (2, 1, 2)]
+
+    input3,size = make_data_set(sample_data1)
+
+    print(clothCutting(20, 30, input, len(input)-1)) #since size will be from 0-n, so it will consider n, but the list will be of n-1 size
+
+
+
 
