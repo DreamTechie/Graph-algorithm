@@ -9,7 +9,7 @@ description in README.md file
 '''
 
 #using dynamic programming
-def clothCutting(length, breadth):
+def clothCuttingDynamicProgramming(length, breadth):
     cuttingMatrix = [[0 for x in range(0, breadth)] for y in range(0, length)]
     cuttingMatrix[3][3] = 2
     cuttingMatrix[4][5] = 9
@@ -34,7 +34,7 @@ def clothCutting(length, breadth):
 
 
 # the actual length and breadth of the cloth is 20x30, increament is done for 0 th position
-clothCutting(21, 31)
+
 
 #using recursion only
 def clothCutting(lenX, lenY, area, input, n, weight=0):
@@ -54,7 +54,7 @@ def clothCutting(lenX, lenY, area, input, n, weight=0):
             print(e)
 
 
-#to make sample data set 
+#to make sample data set
 def make_data_set(input): # [(),()]
     sample_data = []
     for i in input:
