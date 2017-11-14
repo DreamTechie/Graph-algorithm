@@ -7,23 +7,54 @@ Problem Description: This is a recursive solution to the cloth cutting problem -
 description in README.md file
 
 '''
-from copy import deepcopy
 
-def clothCutting(lenX, lenY, input, n, weight=0):
+#using dynamic programming
+def clothCutting(length, breadth):
+    cuttingMatrix = [[0 for x in range(0, breadth)] for y in range(0, length)]
+    cuttingMatrix[3][3] = 2
+    cuttingMatrix[4][5] = 9
+    cuttingMatrix[3][4] = 10
+    cuttingMatrix[12][23] = 100
+
+    for lenX in range(0, length):
+        for lenY in range(0, breadth):
+            cut = 0
+            for k in range(0, int(lenX / 2)):  # hori
+                if (cut < (cuttingMatrix[k][lenY] + cuttingMatrix[lenX - k][lenY])):
+                    cut = (cuttingMatrix[k][lenY] + cuttingMatrix[lenX - k][lenY])
+            for k in range(0, int(lenY / 2)):  # verti
+                try:
+                    if (cut < (cuttingMatrix[lenX][k] + cuttingMatrix[lenX][lenY - k])):
+                        cut = (cuttingMatrix[lenX][k] + cuttingMatrix[lenX][lenY - k])
+                except Exception as e:
+                    print(e)
+            cuttingMatrix[lenX][lenY] = cut
+
+    print(cuttingMatrix)
+
+
+# the actual length and breadth of the cloth is 20x30, increament is done for 0 th position
+clothCutting(21, 31)
+
+#using recursion only
+def clothCutting(lenX, lenY, area, input, n, weight=0):
 
     if n<0:
         return weight
-    if(input[n]['x'] > lenX) or (input[n]['y'] > lenY):
-        return clothCutting(lenX,lenY, input, n-1, weight)
+    if(input[n-1]['x']*input[n-1]['y'] > area): #this is orientation less configuration
+        return clothCutting(lenX,lenY, area, input, n-1, weight)
 
-    if (lenX - input[n]['x'] >= 0) and (lenY - input[n]['y'] >= 0):
+    if (input[n-1]['x']*input[n-1]['y'] <= area and input[n-1]['x'] <= lenX and input[n-1]['y'] <=lenY):
 
-        buff_weight = input[n]['w']
-        return max(clothCutting(lenX - input[n]['x'],lenY - input[n]['y'], input, n, weight+buff_weight),
-                    clothCutting(lenX - input[n]['x'], lenY, input, n, weight + buff_weight),
-                    clothCutting(lenX, lenY - input[n]['y'], input, n, weight + buff_weight),
-                    clothCutting(lenX, lenY, input, n-1, weight))
+        buff_weight = input[n-1]['w']
+        try:
+            return max(clothCutting(lenX,lenY,area-input[n-1]['x']*input[n-1]['y'], input, n-1, weight+buff_weight),
+                    clothCutting(lenX, lenY, area, input, n-1, weight))
+        except Exception as e:
+            print(e)
 
+
+#to make sample data set 
 def make_data_set(input): # [(),()]
     sample_data = []
     for i in input:
@@ -43,9 +74,9 @@ if __name__ == '__main__':
 
     sample_data1 = [(8, 4, 66), (3, 7, 35), (8, 2, 24), (3, 4, 17), (3, 3, 11), (3, 2, 8), (2, 1, 2)]
 
-    input3,size = make_data_set(sample_data1)
+    input3,size = make_data_set(sample_data)
 
-    print(clothCutting(20, 30, input, len(input)-1)) #since size will be from 0-n, so it will consider n, but the list will be of n-1 size
+    print(clothCutting(20, 30, 20*30, input, len(input))) #since size will be from 0-n, so it will consider n, but the list will be of n-1 size
 
 
 

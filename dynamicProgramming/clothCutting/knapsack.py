@@ -1,3 +1,4 @@
+
 def knapSack(W, wt, val, n):
     # Base Case
     if n == 0 or W == 0:
