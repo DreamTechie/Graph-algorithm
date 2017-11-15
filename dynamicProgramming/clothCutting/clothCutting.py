@@ -6,18 +6,18 @@ Date: Nov 13, 2017
 Developed in Linux OS
 Requirement = python 3.x +
 
-Problem Description: This is a recursive and dynamic programming solution to the cloth cutting problem - please see the problem
+Problem Description: This is a dynamic programming solution to the cloth cutting problem - please see the problem
 description in README.md file
 
 '''
 
 import time
 
-#Using Dynamic Programming
+#Using Dynamic Programming - orentation less computation
+
 def clothCuttingDynamicProgramming(length, breadth, data):
 
     cuttingMatrix = [[0 for x in range(0, breadth)] for y in range(0, length)]
-
 
     #initilizing all the given data
     for i in data:
@@ -25,8 +25,9 @@ def clothCuttingDynamicProgramming(length, breadth, data):
 
             cuttingMatrix[i['x']][i['y']] = i['w']
 
-        # if(i['y']<=length and i['x']<=breadth):
-        #     cuttingMatrix[i['y']][i['x']] = i['w']
+        #Making the program orentation variable
+        if(i['y']<=length and i['x']<=breadth):
+            cuttingMatrix[i['y']][i['x']] = i['w']
 
 
     for lenX in range(0, length):
@@ -42,23 +43,6 @@ def clothCuttingDynamicProgramming(length, breadth, data):
             cuttingMatrix[lenX][lenY] = cut
 
     return cuttingMatrix[length-1][breadth-1]
-
-
-#The actual length and breadth of the cloth is 20x30, increament is done for 0 th position
-
-#Using recursion only
-def clothCutting(lenX, lenY, area, input, n, weight=0):
-
-    if n<0:
-        return weight
-    if(input[n-1]['x']*input[n-1]['y'] > area): #this is orientation less configuration
-        return clothCutting(lenX,lenY, area, input, n-1, weight)
-
-    if (input[n-1]['x']*input[n-1]['y'] <= area and input[n-1]['x'] <= lenX and input[n-1]['y'] <=lenY):
-
-        buff_weight = input[n-1]['w']
-        return max(clothCutting(lenX,lenY,area-input[n-1]['x']*input[n-1]['y'], input, n, weight+buff_weight),
-                    clothCutting(lenX, lenY, area, input, n-1, weight))
 
 
 #To make sample data set
@@ -91,7 +75,6 @@ def sample_data(n):
     if n==2:
         return make_data_set(sample_data2),41,71
     if n==3:
-
         return make_data_set(sample_data3),11,16
     if n==4:
         return make_data_set(sample_data4),41,71
@@ -110,10 +93,6 @@ if __name__ == '__main__':
         diff_time = time.time() - start_time
         print ('and the total time for execution of program :' +str(diff_time) + 'seconds')
 
-        start_time = time.time()
-        print("The maximum profit using Recursion: " + str(clothCutting(length, breadth,(length-1)*(breadth-1)
-                                                                          ,data,len(data))))  # since size will be from 0-n, so it will consider n, but the list will be of n-1 size
-        print('and the total time for execution of program :' + str(time.time() - start_time) + 'seconds')
     else:
         print("sample " + str(n) +' not found' )
 
