@@ -27,11 +27,11 @@ Your output should be the best return that you can get. You do not need to print
 [ python3 ] [ program_file ] [ filename ] .  
 <code> - python3 clothCutting.py sampledata </code >
 
-File name must be submitted while executing the program, as the program takes the input of a file name from the console
+Test file name must be submitted while executing the program, as the program takes the input of a test file name from the console
 
 ### Limitations 
 - Program produces output for a orientations insensitive products i.e. x,y is consider same as y,x input. To make it orientation sensative, please comment out line 21-31 in *clothCutting.py*
-- Need to provide a file name as a input while executing the program from the commandline(only option available)
+- Need to provide a test file name as a input while executing the program from the commandline(only option available)
 - There should not be any \r (carriage return) after the last line (x,y product line in our case) of the file(important requirement)
 
 ### Refrences
