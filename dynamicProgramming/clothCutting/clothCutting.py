@@ -12,6 +12,7 @@ description in README.md file
 '''
 
 import time
+import sys
 
 #Using Dynamic Programming - orentation less computation
 
@@ -25,7 +26,8 @@ def clothCuttingDynamicProgramming(length, breadth, data):
 
             cuttingMatrix[i['x']][i['y']] = i['w']
 
-        #Making the program orentation variable
+        #Making the program orentation variable i.e X x Y  = Y x X
+        
         if(i['y']<=length and i['x']<=breadth):
             cuttingMatrix[i['y']][i['x']] = i['w']
 
@@ -51,6 +53,31 @@ def make_data_set(input): # [(),()]
     for i in input:
         sample_data.append({'x':i[0],'y':i[1],'w':i[2]})
     return sample_data
+
+def read_data_from_file(filename):
+
+    try:
+        with open(filename,'r') as f:
+            a = f.readlines()
+    except Exception as e:
+        print(e)
+        return
+
+    dimensions = a[0].split()
+    no_of_input = a[1]
+    data = []
+
+    for x in range(2,len(a)):
+        #data.append(a[x].split())
+        tup = ()
+        for i in a[x].split():
+            tup = tup + (int(i),)
+
+        data.append(tup)
+
+    data_read = make_data_set(data)
+    return data_read,int(dimensions[0])+1,int(dimensions[1])+1 #+1 is providing offset to include 0th position
+
 
 def sample_data(n):
 
@@ -84,20 +111,35 @@ def sample_data(n):
 
 if __name__ == '__main__':
 
+    if sys.argv[1]:
+        try:
+            data, length, breadth = read_data_from_file(sys.argv[1])
+            print(data,length,breadth)
 
-    n = 2
-    if sample_data(n)!=False:
-        data, length, breadth = sample_data(n)
-        start_time = time.time()
-        print("The maximum profit using Dynamic programming: " +str(clothCuttingDynamicProgramming(length, breadth, data)))  # since size will be from 0-n, so it will consider n, but the list will be of n-1 size
-        diff_time = time.time() - start_time
-        print ('and the total time for execution of program :' +str(diff_time) + 'seconds')
+            start_time = time.time()
+            print("The maximum profit using Dynamic programming: " +str(clothCuttingDynamicProgramming(length, breadth, data)))  # since size will be from 0-n, so it will consider n, but the list will be of n-1 size
+            diff_time = time.time() - start_time
+            print ('and the total time for execution of program :' +str(diff_time) + 'seconds')
 
+        except Exception as e:
+            print(e)
     else:
-        print("sample " + str(n) +' not found' )
+        print("File not found")
 
 
+    #To use the sample data, please uncomment the code below
 
+    # n = 3
+    # if sample_data(n)!=False:
+    #     data, length, breadth = sample_data(n)
+    #     start_time = time.time()
+    #     print("The maximum profit using Dynamic programming: " +str(clothCuttingDynamicProgramming(length, breadth, data)))  # since size will be from 0-n, so it will consider n, but the list will be of n-1 size
+    #     diff_time = time.time() - start_time
+    #     print ('and the total time for execution of program :' +str(diff_time) + 'seconds')
+    #
+    # else:
+    #     print("sample " + str(n) +' not found' )
+    #
 
 
 
