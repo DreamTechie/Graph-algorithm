@@ -24,7 +24,7 @@ Your output should be the best return that you can get. You do not need to print
 - OS: Linux  
 
 ### Executing the program
-
+[ python3 ] [ file_name ] [ filename ]
 <code> - python3 clothCutting.py sampledata </code >
 
 File name must be submitted while executing the program, as the program takes the input of a file name from the console
