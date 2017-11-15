@@ -27,7 +27,6 @@ def clothCuttingDynamicProgramming(length, breadth, data):
             cuttingMatrix[i['x']][i['y']] = i['w']
 
         #Making the program orentation variable i.e X x Y  = Y x X
-
         if(i['y']<=length and i['x']<=breadth):
             cuttingMatrix[i['y']][i['x']] = i['w']
 

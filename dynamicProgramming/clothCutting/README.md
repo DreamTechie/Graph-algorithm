@@ -19,8 +19,6 @@ by whitespaces. For example, one input is:
 Your output should be the best return that you can get. You do not need to print the strategy.
 
 
-### Solution:
-
 ### Requirements 
 - python 3.x+ 
 - OS: Linux  
@@ -29,4 +27,9 @@ Your output should be the best return that you can get. You do not need to print
 
 <code> - python3 clothCutting.py sampledata </code >
 
-File name must be submitted while executing the program
+File name must be submitted while executing the program, as the program takes the input of file name from the console
+
+### Limitations 
+- Program produce output for a orientations insensitive products i.e. x,y is consider same as y,x. To make it orientation sensative, please comment out line 21-31 in *clothCutting.py*
+- Need to provide a file name input while executing a program from the commandline(only option)
+- There should not be any \r (carriage return) after the last line (x,y product in our case) of the file(important requirement)
