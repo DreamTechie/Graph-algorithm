@@ -17,3 +17,16 @@ by whitespaces. For example, one input is:
 - 3 3 2
 ### Output 
 Your output should be the best return that you can get. You do not need to print the strategy.
+
+
+### Solution:
+
+### Requirements 
+- python 3.x+ 
+- OS: Linux  
+
+### Executing the program
+
+<code> - python3 clothCutting.py sampledata </code >
+
+File name must be submitted while executing the program

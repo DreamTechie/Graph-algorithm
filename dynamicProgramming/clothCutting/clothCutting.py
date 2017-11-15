@@ -14,7 +14,7 @@ description in README.md file
 import time
 import sys
 
-#Using Dynamic Programming - orentation less computation
+#Using Dynamic Programming - orientation less computation
 
 def clothCuttingDynamicProgramming(length, breadth, data):
 
@@ -27,7 +27,7 @@ def clothCuttingDynamicProgramming(length, breadth, data):
             cuttingMatrix[i['x']][i['y']] = i['w']
 
         #Making the program orentation variable i.e X x Y  = Y x X
-        
+
         if(i['y']<=length and i['x']<=breadth):
             cuttingMatrix[i['y']][i['x']] = i['w']
 
@@ -79,6 +79,7 @@ def read_data_from_file(filename):
     return data_read,int(dimensions[0])+1,int(dimensions[1])+1 #+1 is providing offset to include 0th position
 
 
+#some sample data
 def sample_data(n):
 
     #20x30
