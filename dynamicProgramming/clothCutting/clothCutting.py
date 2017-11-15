@@ -14,26 +14,32 @@ description in README.md file
 import time
 import sys
 
-#Using Dynamic Programming - orientation less computation
+'''Using Dynamic Programming - orientation less computation'''
 
 def clothCuttingDynamicProgramming(length, breadth, data):
 
     cuttingMatrix = [[0 for x in range(0, breadth)] for y in range(0, length)]
 
-    #initilizing all the given data
+    '''Initializing all the given data'''
+
     for i in data:
         if (i['x'] <= length and i['y'] <= breadth):
 
             cuttingMatrix[i['x']][i['y']] = i['w']
 
-        #Making the program orentation variable i.e X x Y  = Y x X
+        '''Making the program orientation variable i.e X x Y  = Y x X'''
+
         if(i['y']<=length and i['x']<=breadth):
             cuttingMatrix[i['y']][i['x']] = i['w']
 
-
+    '''Filling cuttingMatrix with optimized cost for each cell'''
     for lenX in range(0, length):
         for lenY in range(0, breadth):
             cut = 0
+
+            '''Cutting a cloth say of size (1,4 + 1,1) is equivalent to (1,1 + 1,4) 
+               thus we are only checking till (lenX/2 + 1) and (lenY/2 +1) '''
+
             for k in range(0, int(lenX / 2)+1):
                 if (cut < (cuttingMatrix[k][lenY] + cuttingMatrix[lenX - k][lenY])):
                     cut = (cuttingMatrix[k][lenY] + cuttingMatrix[lenX - k][lenY])
@@ -46,7 +52,7 @@ def clothCuttingDynamicProgramming(length, breadth, data):
     return cuttingMatrix[length-1][breadth-1]
 
 
-#To make sample data set
+''' Construction of sample data'''
 def make_data_set(input): # [(),()]
     sample_data = []
     for i in input:
@@ -75,10 +81,12 @@ def read_data_from_file(filename):
         data.append(tup)
 
     data_read = make_data_set(data)
-    return data_read,int(dimensions[0])+1,int(dimensions[1])+1 #+1 is providing offset to include 0th position
+
+    ''''+1 is providing offset to include 0th position'''
+    return data_read,int(dimensions[0])+1,int(dimensions[1])+1
 
 
-#some sample data
+'''Some sample data'''
 def sample_data(n):
 
     #20x30
@@ -96,7 +104,10 @@ def sample_data(n):
                     (17, 27, 280), (15, 24, 240), (16, 25, 260),
                     (15, 24, 240), (23, 14, 220), (21, 12, 180), (19, 11, 160), (9, 17, 140)]
 
-    #offsetting 0,0 position in each data set
+
+    '''offsetting for 0,0 position in each data set by adding 1 to the length and breadth
+       since size will be from 0-n, so it will consider n, but the list will be of n-1 size'''
+
     if n==1:
         return make_data_set(sample_data1),21,31
     if n==2:
@@ -117,7 +128,7 @@ if __name__ == '__main__':
             print(data,length,breadth)
 
             start_time = time.time()
-            print("The maximum profit using Dynamic programming: " +str(clothCuttingDynamicProgramming(length, breadth, data)))  # since size will be from 0-n, so it will consider n, but the list will be of n-1 size
+            print("The maximum profit using Dynamic programming: " +str(clothCuttingDynamicProgramming(length, breadth, data)))
             diff_time = time.time() - start_time
             print ('and the total time for execution of program :' +str(diff_time) + 'seconds')
 
@@ -127,8 +138,7 @@ if __name__ == '__main__':
         print("File not found")
 
 
-    #To use the sample data, please uncomment the code below
-
+    '''To use the sample data, please uncomment the code below'''
     # n = 3
     # if sample_data(n)!=False:
     #     data, length, breadth = sample_data(n)
