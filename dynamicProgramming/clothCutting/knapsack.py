@@ -1,3 +1,5 @@
+'''this code is copied from http://www.geeksforgeeks.org/knapsack-problem/''' 
+
 
 def knapSack(W, wt, val, n):
     # Base Case
